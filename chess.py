@@ -140,6 +140,7 @@ class ChessGame:
                     and board[home_row][3] == "."
                     and board[home_row][2] == "."
                     and board[home_row][1] == "."
+                    and board[home_row][0] == ("R" if side == "w" else "r")
                 ):
                     moves.append((home_row, 2))
 
