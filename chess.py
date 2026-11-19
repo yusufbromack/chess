@@ -128,7 +128,12 @@ class ChessGame:
             k_flag = "K" if side == "w" else "k"
             q_flag = "Q" if side == "w" else "q"
             if r == home_row and c == 4:
-                if castling.get(k_flag) and board[home_row][5] == "." and board[home_row][6] == ".":
+                if (
+                    castling.get(k_flag)
+                    and board[home_row][7] == ("R" if side == "w" else "r")
+                    and board[home_row][5] == "."
+                    and board[home_row][6] == "."
+                ):
                     moves.append((home_row, 6))
                 if (
                     castling.get(q_flag)
